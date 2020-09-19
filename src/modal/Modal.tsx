@@ -6,9 +6,11 @@ interface check {
 }
 export const Modal = (props:check) => {
   const cancel = () => {
+    console.log('cancel')
     return props.openModal();
   }
   const done = () => {
+    console.log('done')
     return props.openModal();
   }
   return (
