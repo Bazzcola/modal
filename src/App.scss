@@ -1,0 +1,15 @@
+.container{
+  height:100vh;
+  background: white;
+  .test-modal{
+    margin-top:20px;
+    margin-left:10px;
+    background:grey;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px #ccc solid;
+    color:white;
+  }
+}
