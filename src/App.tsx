@@ -7,11 +7,6 @@ export const App = () => {
   const openModal = () => {
     setOpenWindow(prevState => !prevState);
   }
-  window.onclick = (event:any) => {
-    if(event.target.matches('.back-drop')) {
-      openModal();
-    }
-  }
   return (
     <div className="container">
       <button className="test-modal" onClick={openModal}>Open modal</button>

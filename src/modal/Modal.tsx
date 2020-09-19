@@ -5,14 +5,21 @@ interface check {
   openModal:() => void;
 }
 export const Modal = (props:check) => {
+
   const cancel = () => {
-    console.log('cancel')
     return props.openModal();
   }
+
   const done = () => {
-    console.log('done')
     return props.openModal();
   }
+
+  window.onclick = (event:any) => {
+    if(event.target.matches('.back-drop')) {
+      props.openModal();
+    }
+  }
+
   return (
       <div className={props.openWindow ? "modal-container" : "modal-container-hide"}>
         <div className="back-drop">
