@@ -4,24 +4,24 @@ interface check {
   openWindow:boolean;
   openModal:() => void;
 }
-export const Modal = (props:check) => {
+export const Modal:React.FC<check> = ({openModal, openWindow}) => {
 
   const cancel = () => {
-    return props.openModal();
+    return openModal();
   }
 
   const done = () => {
-    return props.openModal();
+    return openModal();
   }
 
   window.onclick = (event:any) => {
     if(event.target.matches('.back-drop')) {
-      props.openModal();
+      openModal();
     }
   }
 
   return (
-      <div className={props.openWindow ? "modal-container" : "modal-container-hide"}>
+      <div className={openWindow ? "modal-container" : "modal-container-hide"}>
         <div className="back-drop">
             <div className="back-drop-modal">
                 <h1>you are no longer pro</h1>
